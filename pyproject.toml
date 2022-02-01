@@ -10,6 +10,11 @@ dynamic = ["version", "description"]
 dependencies =[
     "pandas"
 ]
+
+[project.scripts]
+extract_titles = "titanic_utils.cli:main"
+
+
 [project.optional-dependencies]
 dev=[
     "black",
