@@ -14,8 +14,7 @@ def main():
     for name in list_of_names:
         print(extract_titles(name))
 
-    #print(extract_titles(args.name))
-
+    # print(extract_titles(args.name))
 
 
 if __name__ == "__main__":

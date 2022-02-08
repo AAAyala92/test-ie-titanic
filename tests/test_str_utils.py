@@ -7,8 +7,12 @@
 # assert True
 
 from titanic_utils.str_utils import extract_titles
+import hypothesis.strategies as st
+from hypothesis import given
+
 
 import pytest
+
 
 # @ = "Decorator"
 @pytest.mark.parametrize(
@@ -22,6 +26,13 @@ def test_extract_titles_returns_expected_output(expected_input, expected_output)
     # 3. Verify
     assert output == expected_output
 
+
 def test_extract_titles_without_dot_raises_error():
     with pytest.raises(ValueError):
         extract_titles("Alabama")
+
+
+@given(st.text(alphabet=st.characters(blacklist_characters=["."])))
+def test_extract_titles_with_gibberish_without_dots_raise_error(input_text):
+    with pytest.raises(ValueError):
+        extract_titles(input_text)
