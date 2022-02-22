@@ -8,12 +8,12 @@ authors = [{name = "Andres Arturo Ayala", email = "andres.ayala@student.ie.edu"}
 readme = "README.md"
 dynamic = ["version", "description"]
 dependencies =[
-    "pandas"
+    "pandas",
+    "flask"
 ]
 
 [project.scripts]
 extract_titles = "titanic_utils.cli:main"
-
 
 
 [project.optional-dependencies]
