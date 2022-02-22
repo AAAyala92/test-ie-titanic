@@ -1,0 +1,4 @@
+#Install current directory
+# (Dependencies are declared in pyproject.toml)
+
+.
