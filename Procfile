@@ -1,1 +1,1 @@
-web: voila ui.ipynb --port $PORT --Voila.ip=0.0.0.0
+web: voila ui copy.ipynb --port $PORT --Voila.ip=0.0.0.0
